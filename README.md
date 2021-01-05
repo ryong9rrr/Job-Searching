@@ -1,2 +1,2 @@
 # Job-Searching
-채용공고 한 눈에 보기 🔎
+Job-Searching App 을 위한 python 파일
