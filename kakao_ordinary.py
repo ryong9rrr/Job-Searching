@@ -32,10 +32,26 @@ def extract_jobs(last_page) :
     
 
 def detail_job() :
+    extracted_jobs = []
+    
     for link in extracted_links :
+        extracted_job = []
+
         result = requests.get( f"https://careers.kakao.com{link}" )
         soup = BeautifulSoup(result.text, 'html.parser')
-        print(soup.title)
+
+        title = soup.title.string
+        extracted_job.append(title)
+
+        contents = soup.find_all("p", {"class" : "txt_cont"})
+        for content in contents[0:-1] :
+            cont_desc = content.get_text().strip()
+            extracted_job.append(cont_desc)
+
+        extracted_jobs.append(extracted_job)
+
+    return extracted_jobs
+
 
 def get_job():
     last_page = get_last_page()
