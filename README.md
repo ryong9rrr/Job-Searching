@@ -41,3 +41,6 @@
 
 <h5>부트캠프</h5>
 <h6>👉 https://swmaestro.org/sw/main/contents.do?menuNo=200033</h6>
+
+<h3>📌 SW사관학교 정글/h3>
+<h6>👉 https://swjungle.net/</h6>
